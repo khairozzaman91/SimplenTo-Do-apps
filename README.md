@@ -1,16 +1,42 @@
-# learn
+# A simple to_do App
 
-A new Flutter project.
+A simple Flutter To-Do application with add, update, delete, and task-completion features.  
+This project is ideal for beginners learning CRUD operations in Flutter.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project demonstrates:
 
-A few resources to get you started if this is your first Flutter project:
+- Adding tasks  
+- Updating tasks  
+- Deleting tasks  
+- Marking tasks as completed  
+- Viewing details using `ExpansionTile`  
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Features
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- 📝 Add New Task  
+- ✏️ Edit Task  
+- ❌ Delete Task  
+- ✔️ Complete Task  
+- 🔽 Expand to show details  
+- 📦 Simple MVC-style code structure  
+
+## Project Structure
+
+to_do/
+├── model/
+│ └── taskModel.dart
+├── home_page_to_do.dart
+├── to_do_controller.dart
+└── main.dart
+
+
+## How to Run
+
+1. Clone or download the project  
+2. Open project folder  
+3. Run the following in terminal:
+
+flutter pub get
+flutter run
