@@ -9,7 +9,12 @@ This project is ideal for beginners learning CRUD operations in Flutter.
 <img src="https://github.com/user-attachments/assets/07d11ff2-0fe5-451c-877c-da5fb19fb1c0" width="250">
 
 <h3>Update Page</h3>
-<img src="https://github.com/user-attachments/assets/8cb1720e-a72f-455c-bf3a-40b297504bde" width="250">
+<img 
+  src="https://github.com/user-attachments/assets/8cb1720e-a72f-455c-bf3a-40b297504bde" 
+  width="250" 
+  height="350"
+/>
+
 
 
 </br>
