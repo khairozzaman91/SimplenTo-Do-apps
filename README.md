@@ -47,22 +47,13 @@ This project demonstrates **CRUD operations** and **local persistent storage usi
 
 ---
 
-## 🗂 Project Structure
-
-lib/
- ├── main.dart                     # Entry point, Hive initialization
- ├── to_do/
- │    ├── home_page_to_do.dart     # UI for displaying task list
- │    ├── to_do_controller.dart    # Controller for task CRUD operations
- │    └── model/
- │         └── task_model.dart     # Hive model and adapter
 ⚙ How It Works
 Hive Initialization
-Initialized in main.dart.
+Initialized in main.dart
 
-TaskModelAdapter is registered.
+TaskModelAdapter is registered
 
-tasksBox is opened before the app starts.
+tasksBox is opened before the app starts
 
 CRUD Operations (ToDoController)
 addNewTask() → Add a task
@@ -76,40 +67,51 @@ deleteTask() → Delete task (with undo option)
 insertTask() → Re-insert deleted task
 
 UI
-HomePageToDo uses ListView.builder and ExpansionTile for tasks.
+HomePageToDo uses ListView.builder and ExpansionTile for tasks
 
-Bottom sheet is used for adding/updating tasks.
+Bottom sheet is used for adding/updating tasks
 
-Tasks have color coding based on completion status.
+Tasks have color coding based on completion status
 
 Persistence
-All tasks are stored in Hive, so they remain saved even after app restart.
+All tasks are stored in Hive, so they remain saved even after app restart
 
 🚀 Getting Started
-Clone the repository:
+Clone the repository
 bash
 Copy code
 git clone https://github.com/khairozzaman91/SimplenTo-Do-apps.git
 cd SimplenTo-Do-apps
-Install dependencies:
+Install dependencies
 bash
 Copy code
 flutter pub get
-Generate Hive TypeAdapters:
+Generate Hive TypeAdapters
 bash
 Copy code
 flutter pub run build_runner build --delete-conflicting-outputs
 This will create the required task_model.g.dart file.
 
-Run the app:
+Run the app
 bash
 Copy code
 flutter run
 📝 Notes
-Bottom Sheet: Dynamically used for adding/updating tasks.
+Bottom Sheet: Dynamically used for adding/updating tasks
 
-Undo Delete: Deleted tasks can be restored using the SnackBar action.
+Undo Delete: Deleted tasks can be restored using the SnackBar action
 
-Completion: Completed tasks are shown with a different color and strikethrough text.
+Completion: Completed tasks are shown with a different color and strikethrough text
 
-Hive Adapter: Make sure task_model.g.dart is generated before running the app.
+Hive Adapter: Make sure task_model.g.dart is generated before running the app
+
+## 🗂 Project Structure
+
+```text
+lib/
+ ├── main.dart                     # Entry point, Hive initialization
+ ├── to_do/
+ │    ├── home_page_to_do.dart     # UI for displaying task list
+ │    ├── to_do_controller.dart    # Controller for task CRUD operations
+ │    └── model/
+ │         └── task_model.dart     # Hive model and adapter
