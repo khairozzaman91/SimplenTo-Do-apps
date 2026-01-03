@@ -12,13 +12,14 @@ This project demonstrates **CRUD operations** and **local persistent storage usi
 ## 📸 Screenshots
 
 ### Home Page
-![home](https://github.com/user-attachments/assets/b655f19d-6b4f-4288-9245-ec1897aea311)
+<img src="https://github.com/user-attachments/assets/b655f19d-6b4f-4288-9245-ec1897aea311" width="300">
 
 ### Update Task Page
-![update task](https://github.com/user-attachments/assets/1da01929-31da-436f-b42c-aa888b7372cf)
+<img src="https://github.com/user-attachments/assets/1da01929-31da-436f-b42c-aa888b7372cf" width="300">
 
 ### Add New Task
-![new task](https://github.com/user-attachments/assets/6d1f75d0-39b3-48d7-a07d-9b10e86f685d)
+<img src="https://github.com/user-attachments/assets/6d1f75d0-39b3-48d7-a07d-9b10e86f685d" width="300">
+
 
 ---
 
@@ -33,7 +34,6 @@ This project demonstrates **CRUD operations** and **local persistent storage usi
 - 🛠 Simple MVC-style project structure  
 
 ---
-
 ## 🛠 Technology Stack
 
 - **Flutter** ^3.10.3  
@@ -46,64 +46,38 @@ This project demonstrates **CRUD operations** and **local persistent storage usi
 - **build_runner** ^2.4.6 → Run code generation  
 
 ---
+---
 
-⚙ How It Works
-Hive Initialization
-Initialized in main.dart
+## ⚙ How It Works
 
-TaskModelAdapter is registered
+### Hive Initialization
+- Hive is initialized in `main.dart`.
+- `TaskModelAdapter` is registered.
+- `tasksBox` is opened before the app starts.
 
-tasksBox is opened before the app starts
+### CRUD Operations (ToDoController)
+- `addNewTask()` → Add a new task
+- `updateTask()` → Update an existing task
+- `toggleComplete()` → Mark task as completed or undo
+- `deleteTask()` → Delete task (with undo option)
+- `insertTask()` → Re-insert a deleted task
 
-CRUD Operations (ToDoController)
-addNewTask() → Add a task
+### UI
+- `HomePageToDo` uses `ListView.builder` and `ExpansionTile` for tasks.
+- Bottom sheet is used for adding/updating tasks.
+- Tasks have color coding based on completion status.
 
-updateTask() → Update a task
+### Persistence
+- All tasks are stored in Hive, so they remain saved even after app restart.
 
-toggleComplete() → Mark task completed / undo
+---
 
-deleteTask() → Delete task (with undo option)
+## 🚀 Getting Started
 
-insertTask() → Re-insert deleted task
-
-UI
-HomePageToDo uses ListView.builder and ExpansionTile for tasks
-
-Bottom sheet is used for adding/updating tasks
-
-Tasks have color coding based on completion status
-
-Persistence
-All tasks are stored in Hive, so they remain saved even after app restart
-
-🚀 Getting Started
-Clone the repository
-bash
-Copy code
+### 1. Clone the repository
+```bash
 git clone https://github.com/khairozzaman91/SimplenTo-Do-apps.git
 cd SimplenTo-Do-apps
-Install dependencies
-bash
-Copy code
-flutter pub get
-Generate Hive TypeAdapters
-bash
-Copy code
-flutter pub run build_runner build --delete-conflicting-outputs
-This will create the required task_model.g.dart file.
-
-Run the app
-bash
-Copy code
-flutter run
-📝 Notes
-Bottom Sheet: Dynamically used for adding/updating tasks
-
-Undo Delete: Deleted tasks can be restored using the SnackBar action
-
-Completion: Completed tasks are shown with a different color and strikethrough text
-
-Hive Adapter: Make sure task_model.g.dart is generated before running the app
 
 ## 🗂 Project Structure
 
