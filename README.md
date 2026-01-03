@@ -1,62 +1,70 @@
-# Simple To-Do App (Flutter + Hive)
+# 📝 Simple To-Do App (Flutter + Hive)
 
-A simple Flutter To-Do application with add, update, delete, and task-completion features.  
-This project is ideal for beginners learning CRUD operations and **local persistent storage using Hive**.
+[![Flutter](https://img.shields.io/badge/Flutter-3.10.3-blue?logo=flutter)](https://flutter.dev/)
+[![Hive](https://img.shields.io/badge/Hive-2.2.3-orange?logo=database)](https://pub.dev/packages/hive)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+A simple **Flutter To-Do application** with add, update, delete, and task-completion features.  
+This project demonstrates **CRUD operations** and **local persistent storage using Hive**. Ideal for beginners learning Flutter.
 
 ---
 
-## Screenshots
+## 📸 Screenshots
 
 ### Home Page
-<img src="https://github.com/user-attachments/assets/07d11ff2-0fe5-451c-877c-da5fb19fb1c0" width="250">
+![home](https://github.com/user-attachments/assets/b655f19d-6b4f-4288-9245-ec1897aea311)
 
 ### Update Task Page
-<img src="https://github.com/user-attachments/assets/8cb1720e-a72f-455c-bf3a-40b297504bde" width="250"/>
+![update task](https://github.com/user-attachments/assets/1da01929-31da-436f-b42c-aa888b7372cf)
+
+### Add New Task
+![new task](https://github.com/user-attachments/assets/6d1f75d0-39b3-48d7-a07d-9b10e86f685d)
 
 ---
 
-## Features
+## 🌟 Features
 
 - 📝 Add New Task  
 - ✏️ Edit Task  
 - ❌ Delete Task  
 - ✔️ Mark Task as Completed  
 - 🔽 Expand to show Task Details  
-- 💾 Persistent storage using **Hive** database  
-- 🛠 Simple MVC-style code structure  
+- 💾 Persistent storage using **Hive**  
+- 🛠 Simple MVC-style project structure  
 
 ---
 
-## Technology Stack
+## 🛠 Technology Stack
 
 - **Flutter** ^3.10.3  
 - **Hive** ^2.2.3 → Lightweight NoSQL DB for local storage  
 - **Hive Flutter** ^1.1.0 → Hive integration for Flutter  
-- **Path Provider** ^2.1.5 → Required by Hive to locate storage directory  
+- **Path Provider** ^2.1.5 → Required by Hive for storage location  
 
-**Dev Dependencies (For Hive Code Generation):**  
+**Dev Dependencies (Hive Code Generation):**  
 - **hive_generator** ^2.0.0 → To generate Hive TypeAdapter  
-- **build_runner** ^2.4.6 → To run code generation  
+- **build_runner** ^2.4.6 → Run code generation  
 
 ---
 
-## Project Structure
+## 🗂 Project Structure
 
-```text
 lib/
- ├── main.dart                 # Entry point, Hive initialization
+ ├── main.dart                     # Entry point, Hive initialization
  ├── to_do/
- │    ├── home_page_to_do.dart  # UI for displaying task list
- │    ├── to_do_controller.dart # Controller for task CRUD operations
+ │    ├── home_page_to_do.dart     # UI for displaying task list
+ │    ├── to_do_controller.dart    # Controller for task CRUD operations
  │    └── model/
- │         └── task_model.dart  # Hive model and adapter
-How It Works
+ │         └── task_model.dart     # Hive model and adapter
+⚙ How It Works
 Hive Initialization
-Hive is initialized in main.dart. TaskModelAdapter is registered, and the tasksBox is opened before the app starts.
+Initialized in main.dart.
 
-CRUD Operations
-ToDoController manages tasks:
+TaskModelAdapter is registered.
 
+tasksBox is opened before the app starts.
+
+CRUD Operations (ToDoController)
 addNewTask() → Add a task
 
 updateTask() → Update a task
@@ -68,40 +76,36 @@ deleteTask() → Delete task (with undo option)
 insertTask() → Re-insert deleted task
 
 UI
-HomePageToDo uses ListView.builder and ExpansionTile for each task.
+HomePageToDo uses ListView.builder and ExpansionTile for tasks.
 
-Bottom sheet is used to add or update tasks.
+Bottom sheet is used for adding/updating tasks.
 
 Tasks have color coding based on completion status.
 
 Persistence
 All tasks are stored in Hive, so they remain saved even after app restart.
 
-Getting Started
+🚀 Getting Started
 Clone the repository:
-
 bash
 Copy code
 git clone https://github.com/khairozzaman91/SimplenTo-Do-apps.git
 cd SimplenTo-Do-apps
 Install dependencies:
-
 bash
 Copy code
 flutter pub get
 Generate Hive TypeAdapters:
-
 bash
 Copy code
 flutter pub run build_runner build --delete-conflicting-outputs
-This will create the task_model.g.dart file required by Hive.
+This will create the required task_model.g.dart file.
 
 Run the app:
-
 bash
 Copy code
 flutter run
-Notes
+📝 Notes
 Bottom Sheet: Dynamically used for adding/updating tasks.
 
 Undo Delete: Deleted tasks can be restored using the SnackBar action.
